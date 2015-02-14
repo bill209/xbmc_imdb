@@ -1,0 +1,4 @@
+
+body { font: 10px 'consolas';}
+ul { list-style-type: none; padding-left: 10px;}
+.error { color: red;  }

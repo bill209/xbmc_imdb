@@ -1,0 +1,14 @@
+	<div  id='container' ng-style="{'background-image': 'url(' + img.url + ')'}">
+		<p>xbmcAdmin:  {{ctr}}</p>
+		<a href='' ng-click="loadMovies()">load movies</a>
+		<h3>bad movies</h3>
+		<ul>
+			<li ng-repeat='movie in badMovies | limitTo: 999'><span ng-show='!movie.error'>{{movie.title}}</span></li>
+		</ul>
+
+		<h3>processing</h3>
+		<ul>
+			<li ng-repeat='movie in data | limitTo: 999'><span ng-show='!movie.error'>tmdb: {{movie.tmdbId}} / results: {{movie.results}} / title: {{movie.title}} </span><span class='error' ng-show='movie.error'>{{movie.title}} </span></li>
+		</ul>
+		  <hr />
+	</div>
